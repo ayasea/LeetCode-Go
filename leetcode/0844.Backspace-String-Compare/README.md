@@ -1,4 +1,4 @@
-# [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
+# [844. 比较含退格的字符串](https://leetcode.com/problems/backspace-string-compare/)
 
 ## 题目
 

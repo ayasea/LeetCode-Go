@@ -1,4 +1,4 @@
-# [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+# [496. 下一个更大元素 I](https://leetcode.com/problems/next-greater-element-i/)
 
 ## 题目
 

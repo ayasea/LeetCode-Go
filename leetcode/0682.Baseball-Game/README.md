@@ -1,4 +1,4 @@
-# [682. Baseball Game](https://leetcode.com/problems/baseball-game/)
+# [682. 棒球比赛](https://leetcode.com/problems/baseball-game/)
 
 ## 题目
 

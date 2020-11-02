@@ -1,4 +1,4 @@
-# [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+# [20. 有效的括号](https://leetcode.com/problems/valid-parentheses/description/)
 
 ## 题目
 

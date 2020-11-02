@@ -1,5 +1,7 @@
 package leetcode
 
+import "strings"
+
 //解法一
 func removeOuterParentheses(S string) string {
 	now, current, ans := 0, "", ""
@@ -20,26 +22,22 @@ func removeOuterParentheses(S string) string {
 
 //解法二
 func removeOuterParenthesesV2(S string) string {
-	stack, res, counter := []byte{}, "", 0
-	for i := 0; i < len(S); i++ {
-		if counter == 0 && len(stack) == 1 && S[i] == ')' {
-			stack = stack[1:]
-			continue
-		}
-		if len(stack) == 0 && S[i] == '(' {
-			stack = append(stack, S[i])
-			continue
-		}
-		if len(stack) > 0 {
-			switch S[i] {
-			case '(':
-				counter++
-				res += "("
-			case ')':
-				counter--
-				res += ")"
+	if len(S) == 0 {
+		return ""
+	}
+	stack := []byte{S[0]}
+	start := 1
+	var res strings.Builder
+	for i := 1; i < len(S); i++ {
+		if len(stack) > 0 && S[i] == ')' && stack[len(stack)-1] == '(' {
+			stack = stack[:len(stack)-1]
+			if len(stack) == 0 {
+				res.WriteString(S[start:i])
+				start = i + 2
 			}
+		} else {
+			stack = append(stack, S[i])
 		}
 	}
-	return res
+	return res.String()
 }
